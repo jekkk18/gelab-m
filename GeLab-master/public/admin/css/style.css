@@ -1,0 +1,15 @@
+.hidden-video-card{
+	display: none;
+}
+.video-card{
+	display: flex;
+    margin-bottom: 20px;
+}
+
+.datepicker td.today.day{
+	color: #71b6f9!important;
+	background-color: transparent !important;
+}
+.datepicker td.today.day:hover{
+	color: black !important;
+}
