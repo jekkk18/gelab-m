@@ -1,0 +1,3213 @@
+body{
+    margin: 0;
+    /* padding: 0; */
+  
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    /* padding: 0; */
+    text-decoration: none;
+}
+.logo-link{
+    display: block;
+    width: fit-content;
+    z-index: 4;
+    background: #FFFFFF;
+    padding: 30px;
+    margin-top: 40px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+}
+.logo-link img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.head-sticky{
+    width: 100%;
+    height: 125px;
+    position: fixed;
+    top: 0;
+    z-index: 999;
+    background: #FFFFFF;
+    /* transition: 0.4s; */
+    box-shadow: 0px 6px 8px -7px rgb(0 0 0 / 30%);
+}
+.head-sticky .navbars{
+    padding-top: 12px;
+}
+.head-sticky .logo-link{
+    width: 114px;
+    height: 114px;
+    padding: 15px;
+    margin-top: -15px;
+    /* transition: 0.4s; */
+}
+.head-cont{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 51px;
+    height: 150px;
+}
+
+.navbars{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+}
+.nav{
+    position: relative;
+}
+.nav-links{
+    color: #3A3A3A;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Bebas Neue';
+    line-height: 24px;
+    transition: 0.5s;
+    /* position: relative; */
+    margin-right: 35px;
+}
+.nav-links:last-child{
+    margin-right: 32px;
+}
+/* .nav-links::before,
+.active-nav-borders::before{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 2px;
+    width: 0;
+    background: #0F75BC;
+    transition: 0.4s;
+} */
+.nav-li.colored .nav-links{
+    color: #10AEA8;
+}
+.sub-box{
+    position: absolute;
+    width: 120%;
+    top: 25px;
+    left: 0;
+    height: 0;
+    background: transparent;
+    z-index: 55;
+    transition: 0.4s;
+    display: flex;
+    align-items: flex-end;
+    overflow: hidden;
+}
+.submenu-link{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #3A3A3A;
+    font-family: 'Roboto _GEO Nus';
+    width: 42%;
+    transition: 0.4s;
+    margin-left: 30px;
+}
+.submenu-link:hover{
+    color:#10AEA8;
+}
+/* .nav-links:nth-child(2) .sub-box{
+    left: ;
+} */
+.sub-menu{
+    width: 100%;
+    height: 93%;
+    background: #FFFFFF;
+    transition: 0.4s;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    justify-content: center;
+    padding-top: 30px;
+}
+.sub-menu:before{
+    position: absolute;
+    content: "";
+    top: 10%;
+    left: 50%;
+    width: 1px;
+    height: 80%;
+    background: #EEEEEE;
+}
+.nav-li:hover .sub-box{
+    height: 243px;
+}
+.nav-links:hover{
+    color: #10AEA8;
+}
+/* .nav-links:hover::before{
+    width: 100%;
+} */
+.active-nav-borders::before{
+    width: 100%;
+}
+.active-nav-borders{
+    color: #10AEA8;
+}
+.burger-box{
+    display: none;
+}
+.burger-lines{
+    width: 26px;
+    height: 26px;
+    transition: 0.4s;
+    overflow: hidden;
+}
+.burger-line{
+    width: 100%;
+    height: 4px;
+    border-radius: 10px;
+    background: #262262;
+    display: block;
+    transition: 0.4s;
+}
+.burger-line:nth-child(2){
+    margin: 3px 0;
+}
+
+.get-touch{
+    color: #3A3A3A;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Bebas Neue';
+    line-height: 24px;
+    border: 2px solid #0F75BC;
+    border-radius: 50px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 173px;
+    margin-right: 25px;
+    z-index: 55;
+}
+.language-change{
+    color: #3A3A3A;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: 'Bebas Neue';
+    line-height: 24px;
+    border: 2px solid #0F75BC;
+    border-radius: 50px;
+    transition: 0.5s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 84px;
+    height: 100%;
+    margin-right: 32px;
+    z-index: 55;
+}
+.get-touch:hover{
+    background: #0F75BC;
+    color: #FFFFFF;
+}
+.language-change:hover{
+    background: #0F75BC;
+    color: #FFFFFF;
+}
+.search-box{
+    display: flex;
+    align-items: center;
+    height: 46px;
+}
+.search-form{
+    width: 225px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    /* border: 2px solid #FFFFFF; */
+    position: relative;
+    /* width: fit-content; */
+
+    /* transition: 0.5s; */
+}
+/* .search-form:hover{
+    border: 2px solid #0F75BC;
+} */
+.search-form:hover .inp-text{
+    border: 2px solid #0F75BC;
+}
+.inp-text:focus-visible {
+    border: 2px solid #0F75BC;
+}
+ 
+.inp-text{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    font-weight: 500;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    /* padding: 11px 20px; */
+    background: rgba(243,243,244,0.9);
+    font-family: 'ALK Rounded Nusx Med';
+    color: #3A3A3A;
+    line-height: 21px;
+    position: absolute;
+    left: 0;
+    border: 2px solid transparent;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    overflow: visible;
+    transition: 0.3s;
+    padding-left: 24px;
+    height: 100%;
+}
+
+.btns{
+    border: none;
+    padding: 7px 0;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: rgba(243,243,244,0.9);
+    position: absolute;
+    right: 2px;
+}
+.icon-search{
+    margin-right: 16px;
+    font-size: 20px;
+}
+.bg-img{
+    margin-top: 0;
+    width: 100%;
+    height: 375px;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    /* background-attachment: fixed; */
+    /* background-size: cover; */
+    background-repeat: no-repeat;
+    z-index: 3;
+}
+
+/* .bg-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+} */
+.bg-text{
+    width: 952px;
+    height: 132px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255,255,255,0.49);
+    position: absolute;
+    bottom: 87px;
+}
+.text-center{
+    color: #262262;
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 60px;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    margin-bottom: 0;
+    text-align: center;
+}
+
+.fix-social{
+    position: fixed;
+    top: 45%;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 50px;
+    background-color: #F3F3F4;
+    z-index: 9999;
+    border-bottom-left-radius: 20px;
+    border-top-left-radius: 20px;
+    transition: 0.4s;
+    box-shadow: 0px 10px 14px -5px rgba(0,0,0,0.5);
+    /* display: none; */
+}
+.fix-social a:first-child{
+    margin-bottom: 20px;
+}
+.fix-social .icon-face{
+    color: #10AEA8;
+    font-size: 24px;
+    width: fit-content;
+    transition: 0.4s;
+}
+.fix-social .icon-in{
+    color: #10AEA8;
+    font-size: 24px;
+    width: fit-content;
+    transition: 0.4s;
+}
+.fix-social .icon-in:hover,
+.fix-social .icon-face:hover{
+    color:  #8B8A8A ;
+}
+/* 
+    tranings-cont  
+*/
+
+
+
+.trainings-section{
+    width: 100%;
+    height: initial;
+    position: relative;
+}
+.trainings-boxes1{
+    width: 100%;
+    height: 408px;
+}
+.tr-box-left{
+    width: calc(100% - 42.3%);
+    height: 100%;
+    background: #262262
+    /* display: inline-block; */
+}
+.tr-img-box{
+    width: fit-content;
+    height: 408px;
+    float: right;
+    position: relative;
+    z-index: 555;
+}
+.tr-img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.tr-bg{
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 34, 98, 0.33);
+    position: absolute;
+    top: 0;
+}
+
+.tr-box-right{
+    width: 42.3%;
+    height: 100%;
+    position: absolute;
+    right: 0%;
+    top: 0;
+    z-index: -1;
+}
+.tr-img-box2{
+    width: 315px;
+    height: 408px;
+    position: relative;
+    float: right;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+}
+.tr-img-box2 img{
+    width: 100%;
+    /* height: 100%; */
+    object-fit: cover;
+}
+.tr-bg2{
+    width: 100%;
+    height: 100%;
+    background: rgba(63, 62, 77, 0.26);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.bg-rect{
+    width: 100%;
+    height: 13px;
+    background-color: #3F3E4D;
+}
+.trainings-text-box{
+    z-index: 2;
+    display: flex;
+}
+
+.trainings-boxes2{
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.tranings-text-box{
+    width: 100%;
+}
+.tr-text{
+    width: 58.5%;
+    margin-top: 75px;
+}
+.tr-text h2{
+    color: #FFFFFF;
+    margin-bottom: 25px;
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 34px;
+    font-family: 'Bebas Neue';
+}
+.tr-article{
+    width: 51%;
+}
+.tr-article p{
+    height: 138px;
+    overflow: hidden;
+    font-size: 18px;
+    line-height: 28px;
+    color: #FFFFFF;
+    margin: 0;
+    font-family: 'Roboto _GEO Nus';
+}
+.tr-arrow .icon-arrow{
+    color: #FFFFFF;
+    font-size: 23px;
+}
+.tr-arrow{
+    margin-top: 34px;
+}
+.tr-text2{
+    width: calc(100% - 58.5%);
+    margin-top: 75px;
+    z-index: 4;
+}
+.other-services{
+    margin-left: 9%;
+    width: 50%;
+}
+
+.other-services h2{
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #303030;
+    font-family: 'Bebas Neue';
+    margin-bottom: 27px;
+}
+.services-list{
+    display: flex;
+    flex-direction: column;
+}
+.services-link{
+    color: #303030;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto _GEO Nus';
+    line-height: 28px;
+    position: relative;
+}
+.services-link span{
+    margin-left: 20px;
+}
+.services-link::before{
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background: #0F75BC;
+}
+.services-link:nth-child(2){
+    align-items: flex-start;
+}
+.services-link:nth-child(2) .check{
+    margin-top: 5px;
+}
+.trainings-icon2{
+    width: 100%;
+}
+.float-arrow2{
+    float: right;
+    font-size: 23px;
+    color: #262262;
+    margin-top: 30px;
+}
+
+
+/* 
+    events container
+*/
+
+
+
+.events-section{
+    position: relative;
+    width: 100%;
+    height: 464px;
+}
+.events-boxes1{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    display: flex;
+}
+
+.ev-left-box{
+    width: 47.2%;
+    height: 100%;
+    background: #F3F3F4;
+}
+.ev-right-slider-box{
+    width: calc(100% - 47.2%);
+    height: 100%;
+    position: relative;
+}
+.left-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 35%;
+    left: 0;
+    z-index: 99;
+    width: 57px;
+    height: 69px;
+    background: rgba(38, 34, 98, 0.70);
+    cursor: pointer;
+    transition: 0.4s;
+}
+.right-arrow{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 35%;
+    right: 0;
+    z-index: 9;
+    width: 57px;
+    height: 69px;
+    background: rgba(38, 34, 98, 0.70);
+    cursor: pointer;
+    transition: 0.4s;
+}
+.left-arrow .icon-left-arrow{
+    font-size: 20px;
+    font-weight: 900;
+    color: #FFFFFF;
+}
+.right-arrow .icon-left-arrow{
+    font-size: 20px;
+    font-weight: 900;
+    color: #FFFFFF;
+    transform: rotate(180deg);
+}
+.left-arrow.slick-disabled .icon-left-arrow{
+    color: rgba(255, 255, 255, 0.4);
+}
+.right-arrow.slick-disabled .icon-left-arrow{
+    color: rgba(255, 255, 255, 0.4);
+}
+.ev-right-box{
+    width: 100%;
+    height: 100%;
+    z-index: 4;
+}
+.ev-right-img-box{
+    width: 100%;
+    height: 481px;
+    position: relative;
+}
+.ev-right-img-box img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.ev-bg{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 34, 98, 0.33);
+}
+.events-time{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+    height: 125px;
+    background: rgba(54, 54, 54, 0.72);
+}
+.events-time a{
+    color: #FFFFFF;
+    font-size: 28px;
+    font-weight: 400;
+    font-family: 'Bebas Neue';
+    background: #ED1C24;
+    width: fit-content;
+    transition: 0.4s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 246px;
+    height: 85px;
+}
+
+.events-time p{
+    position: absolute;
+    bottom: 37px;
+    right: 94px;
+    width: 58%;
+    height: 53px;
+    overflow: hidden;
+    font-size: 18px;
+    color: #FFFFFF;
+    line-height: 28px;
+    font-weight: 400;
+    font-family: 'Roboto _GEO Nus';
+    margin-top: 17px;
+    margin-left: 50px;
+}
+.events-boxes2{
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 3;
+}
+.events-cont{
+    width: 100%;
+    height: 100%;
+    /* padding: 0; */
+}
+.evennts-text-box{
+    width: 47%;
+    height: 100%;
+    padding-right: 94px;
+    margin-top: 78px;
+}
+.evennts-text-box h2{
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #ED1C24;
+    font-family: 'Bebas Neue';
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.events-line{
+    width: 216px;
+    height: 2px;
+    background: rgba(48, 48, 48, 0.44);
+    margin-left: 36px;
+}
+.events-text1{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    height: 80px;
+    overflow: hidden;
+}
+.events-text2{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    height: 58px;
+    overflow: hidden;
+}
+.ev-icon-arrow{
+    color: #ED1C24!important;
+}
+
+/* 
+ logo boxes
+*/
+.logo-boxes{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 0; */
+    height: 310px;
+    position: relative;
+}
+.logo-slider{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+.logo-box{
+    width: fit-content;
+    height: 78px;
+}
+
+.logo-box a{
+    display: block;
+    /* height: 100%; */
+}
+.partners-link-box{
+    position: absolute;
+    top: -48px;
+    /* left: 0; */
+    /* height: 96px; */
+    width: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    background: #10AEA8;
+    z-index: 4;
+}
+.partners-link-box a{
+    font-size: 36px;
+    color: #FFFFFF;
+    font-weight: 400;
+    line-height: 34px;
+    font-family: 'Bebas Neue';
+    padding-top: 31px;
+    padding-bottom: 31px;
+    padding-right: 242px;
+    z-index: 8;
+}
+.partners-link-box::before{
+    position: absolute;
+    content: " ";
+    top: 0;
+    left: -98%;
+    height:100%;
+    width: 100%;
+    background: #10AEA8;
+    z-index: 7;
+}
+.see-all-box{
+    position: absolute;
+    top: 45px;
+    right: 14px;
+}
+.see-all-link{
+    color: #3F3E4D;
+    font-size: 20px;
+    line-height: 30px;
+    font-weight: 400;
+    font-family: 'Roboto _GEO Nus';
+    position: relative;
+    transition: 0.5s;
+}
+.see-all-link::before{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    width: 128%;
+    height: 1px;
+    background: #707070;
+    margin-top: 20px;
+    transition: 0.5s;
+}
+
+.see-all-link::after{
+    content: " ";
+    position: absolute;
+    bottom: 0;
+    left: -8px;
+    width: 0;
+    height: 1px;
+    background: #10AEA8;
+    margin-top: 20px;
+    transition: 0.4s;
+    z-index: 5;
+}
+.see-all-link:hover{
+    color: #10AEA8;
+}
+.see-all-link:hover::before{
+    transform: translateX(270%);
+    right: -2px;
+    width: 0;
+}
+.see-all-link:hover::after{
+    width: 128%;
+    z-index: 6;
+}
+
+.slick-slider{
+    margin-top: 46px;
+}
+
+/* 
+    about container
+*/
+
+.about-section{
+    position: relative;
+    width: 100%;
+    height: 328px;
+    z-index: 12;
+}
+.about-container{
+    width: 100%;
+    height: 328px;
+    display: flex;
+    z-index: 11;
+}
+.left-cont{
+    width: calc(100% - 42.3%);
+    height: 100%;
+    background: #FFFFFF;
+    position: relative;
+    overflow: hidden;
+}
+.line3{
+    width: 400px;
+    position: absolute;
+    bottom: 0;
+}
+.line3 img{
+    width: 100%;
+}
+.right-cont{
+    width: 42.3%;
+    height: 100%;
+    background: #10AEA8;
+    position: relative;
+}
+.child-img{
+    width: fit-content;
+    position: absolute;
+    top: 30px;
+    right: 71px;
+}
+.child-img2{
+    width: fit-content;
+    position: absolute;
+    top: 65px;
+    right: 129px;
+}
+.position-container{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.about-left{
+    /* padding: 0; */
+    width: 58.5%;
+    height: 328px;
+    /* background: gray; */
+    height: 100%;
+}
+.about-right{
+    /* padding: 0; */
+    width: calc(100% - 58.5%);
+    height: 328px;
+    height: 100%;
+}
+
+.about-text{
+    margin-top: 80px;
+    /* padding-right: 50px; */
+    display: flex;
+}
+.about-text h2{
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #262262;
+    font-family: 'Bebas Neue';
+    margin-right: 50px;
+    width: fit-content;
+    height: fit-content;
+}
+.space{
+    margin-left: 10px;
+}
+.about-article{
+    width: 73%;
+}
+.about-article p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #262262;
+    font-family: 'Roboto _GEO Nus';
+    height: 165px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.icon-arrow{
+    font-size: 23px;
+    color: #262262;
+    float: right;
+}
+.about-text2{
+    margin-top: 80px;
+    margin-left: 7%;
+}
+.about-text2 h2{
+    font-size: 34px;
+    color: #FFFFFF;
+    font-weight: 400;
+    line-height: 34px;
+    font-family: 'Bebas Neue';
+    margin-bottom: 10px;
+}
+.about-article2 p{
+    font-size: 18px;
+    font-weight: 400;
+    color: #FFFFFF;
+    line-height: 28px;
+    font-family: 'Roboto _GEO Nus';
+    height: 88px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.icon-arrow2{
+    font-size: 23px;
+    float: right;
+    color: #FFFFFF;
+    margin-top: 32px;
+}
+
+
+/* 
+    contact cont
+*/
+.contact-box{
+    width: 100%;
+    height: 464px;
+    margin-top: -20px;
+    background: #F3F3F4;
+    position: relative;
+    overflow: hidden;
+}
+
+.line-img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 450px;
+    height: 285px;
+    transform: translate(23px, -8px);
+}
+.line-img2{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 585px;
+    height: 320px;
+    transform: translate(-161px, 85px) rotate(9deg);
+}
+.line-img img, 
+.line-img2 img{
+    width: 100%;
+    height: 100%;
+}
+.hand-container{
+    padding: 0 7%;
+    display: flex;
+    justify-content: center;
+}
+.contact-side{
+    width: fit-content;
+    height: auto;
+    text-align: center;
+    margin-top: 103px;
+}
+
+.contact-box-title{
+    font-size: 36px;
+    line-height: 34px;
+    font-weight: 400;
+    color: #3F3E4D;
+    font-family: 'Bebas Neue';
+    transition: 0.4s;
+}
+.contact-box-title a{
+    font-size: 36px;
+    line-height: 34px;
+    font-weight: 400;
+    font-family: 'Bebas Neue';
+    color: #0F75BC;
+    transition: 0.4s;
+    margin-left: 5px;
+}
+.contact-box-title a .icon-plane{
+    margin-left: 5px;
+}
+.contact-text{
+    font-size: 20px;
+    line-height: 32px;
+    color: #3F3E4D;
+    font-weight: 400;
+    font-family: 'Roboto _GEO Nus';
+    padding: 0 10px;
+    text-align: start;
+    margin-top: 59px;
+    transition: 0.5s;
+    margin-bottom: 74px;
+}
+.contact-btn{
+    font-size: 26px;
+    font-weight: 400;
+    line-height: 37px;
+    color: #FFFFFF;
+    font-family: 'Roboto _GEO Nus';
+    padding: 15px 45px;
+    background: #ED1C24;
+    transition: 0.5s;
+    border-radius: 50px;
+    position: relative;
+}
+
+.contact-btn:hover{
+    background-color: #0F75BC;
+}
+/* 
+    footer
+*/
+
+.bg-footer{
+    width: 100%;
+    background: #3F3E4D;
+}
+
+.footer-box{
+    padding: 15px 10%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.icon-border{
+    display: inline-block;
+    border-radius: 50%;
+    border: 2px solid #FFFFFF;
+    padding: 10px 7px;
+    margin-right: 7px;
+    transition: 0.5s;
+}
+.social-link:nth-child(1) .icon-border{
+    padding: 10px 14px;
+}
+.social-link:nth-child(2) .icon-border{
+    padding: 10px;
+}
+.social-link:nth-child(3) .icon-border{
+    padding: 10px;
+}
+.social-link:nth-child(4) .icon-border{
+    padding: 10px 12px;
+}
+.social-link{
+    color: #FFFFFF;
+    font-size: 16px;
+    line-height: 21px;
+    font-weight: 400;
+    font-family: 'Roboto _GEO Nus';
+    transition: 0.5s;
+}
+/* 
+    created
+*/
+
+.creat{
+    width: 100%;
+    height: initial;
+    background: #3F3E4D;
+    border-top: 2px solid #FFFFFF;
+}
+.created-by{
+    /* padding: 0; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 36px;
+}
+.gelab-link,
+.idea-link{
+    font-size: 16px;
+    font-weight: 400;
+    color: #FFFFFF;
+    font-family: 'Roboto _GEO Nus';
+    line-height: 28px;
+    margin: 25px 0;
+    transition: 0.5s;
+}
+
+.gelab-link:hover,
+.idea-link:hover{
+    text-decoration: underline;
+}
+
+.slick-slider{
+    margin-top: 0;
+}
+.slick-list{
+    height: 100%;
+}
+.logo-slider.slick-slider{
+    margin-top: 23px;
+}
+.slick-slider .slick-track, .slick-slider .slick-list{
+    width: 100%;
+    height: 100%;
+} 
+.slick-initialized .slick-slide{
+    width: 100%;
+}
+
+.slick-slide.slick-current.slick-active{
+    height: 100%;
+}
+.slick-slide .logo-box img{
+    max-width: 250px;
+  /* width: 100%; */
+  margin: auto;
+}
+
+
+
+/* 
+
+About Page
+
+*/
+
+.about-box{
+    position: relative;
+    height: 76px;
+}
+.about-box:after{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: 0;
+    width: 549px;
+    height: 1px;
+    background-color: #F2F2F2;
+    z-index: 4;
+}
+/* .events-box:after{
+    width: 836px;
+} */
+.events-det-box:after{
+    width: 767px;
+}
+
+.links-box{
+    margin-top: 29px;
+}
+.home-link, .icon-link, .about-link{
+    font-size: 16px;
+    font-weight: 400;
+    color: #3A3A3A;
+    line-height: 21px;
+    font-family: 'Roboto _GEO Nus';
+    position: relative;
+    padding-bottom: 24px;
+    transition: 0.4s;
+}
+.icon-link{
+    margin: 0 40px;
+    transform: rotate(180deg);
+}
+.home-link:before, .about-link::before{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: -13%;
+    width: 130%;
+    height: 1px;
+    background: transparent;
+    z-index: 5;
+    transition: 0.4s;
+}
+.home-link:hover::before, .about-link:hover::before{
+    background: #10AEA8;
+}
+
+/* .home-link:hover, .about-link:hover{
+    color: #10AEA8;
+} */
+
+.about-page-article h2{
+    font-size: 34px;
+    font-weight: 400;
+    color: #262262;
+    font-family: 'Bebas Neue';
+    line-height: 34px;
+    margin-bottom: 40px;
+    margin-top: 60px;
+}
+
+.about-page-text{
+    width: 86%;
+}
+.about-page-text p{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto _GEO Nus';
+    line-height: 28px;
+    color: #303030;
+    margin-bottom: 30px
+}
+.about-page-text p:nth-child(1){
+    height: 52px;
+    overflow: hidden;
+}
+
+.about-page-text p:nth-child(2){
+    height: 108px;
+    overflow: hidden;
+}
+
+.about-page-text p:nth-child(3){
+    height: 52px;
+    overflow: hidden;
+}
+
+.about-page-text p:nth-child(4){
+    height: 108px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+
+.about-social{
+    width: fit-content;
+    display: flex;
+}
+.about-social a{
+    margin-right: 18px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.about-social a:nth-child(1){
+    background: #3B5998;
+}
+.about-social a:nth-child(2){
+   background: #03A9F4; 
+}
+.about-social a:nth-child(3){
+    background: #0077B5; 
+ }
+ .about-social a span{
+     color: #FFFFFF;
+ }
+ .files-section{
+     width: 100%;
+     margin-top: 60px;
+     margin-bottom: 147px;
+ }
+ .files-article h2{
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #3A3A3A;
+    font-family: 'Bebas Neue';
+    transition: 0.4s;
+    width: fit-content;
+ }
+ .files-box{
+     width: 100%;
+     display: flex;
+     justify-content: space-between;
+     margin-top: 50px;
+ }
+ .file-link{
+     width: calc(100% / 4);
+     display: flex;
+     justify-content: flex-start;
+ }
+ .file-link:nth-child(3){
+    align-items: center;
+ }
+ .icon-file{
+     font-size: 50px;
+     color: #ED1C24;
+ }
+ .files-title{
+     font-size: 18px;
+     font-weight: 400;
+     font-family: 'Bebas Neue';
+     color: #808080;
+     line-height: 26px;
+     text-transform: uppercase;
+     margin-left: 20px;
+     transition: 0.4s;
+ }
+.files-title:hover{
+    color: #262262;
+}
+
+ .files-border{
+     width: 90%;
+     height: 3px;
+     background: #F3F3F4;
+     margin-left: 5%;
+     margin-top: 79px;
+ }
+
+
+
+ /* 
+    laboratories page
+ */
+
+.laboratories{
+    margin-bottom: 160px;
+    overflow: hidden;
+}
+
+
+/* .laboratories-link::before{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: -24%;
+    width: 160%;
+    height: 1px;
+    background: transparent;
+    z-index: 5;
+    transition: 0.4s;
+}
+.home-link:hover::before, .laboratories-link:hover::before{
+    background: #10AEA8;
+} */
+/* .rotate{
+    margin-left: 43px;
+    cursor: pointer;
+    padding: 5px 5px;
+} */
+
+/* .table thead tr th{
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 34px;
+    color: #262262;
+    font-family: 'Bebas Neue';
+}
+
+.table tbody tr th{
+    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #303030;
+    font-family: 'Bebas Neue';
+}
+.table tbody tr td{
+    text-transform: capitalize;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+}
+.table tr{
+    position: relative;
+    transition: 0.4s;
+}
+.table tr::before{
+    content: "";
+    position: absolute;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    left: -100%;
+    transition: 0.4s;
+}
+.table tbody tr:hover:before{
+    background-color: #F3F3F4;
+}
+.table tbody tr:hover{
+    background-color: #F3F3F4;
+}
+.table tr::after{
+    content: "";
+    position: absolute;
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    right: -100%;
+    transition: 0.4s;
+}
+.table tr.active, .table tr.active::after, .table tr.active:before{
+    
+    background-color: #F3F3F4;
+}
+.table tr .rotate{
+    height: fit-content;
+    padding: 10px   ;
+    transition-duration: 0.3s;
+    transform: rotate(90deg);
+}
+.table tr.active .rotate{
+    
+    transform: rotate(270deg);
+}
+.active .td-links-box{
+    max-height: 400px;
+} */
+/* .active .rotate{
+    transform: rotateY(90deg);
+} */
+/* .active{
+    height: 100%;
+    transition: 0.4s;
+} */
+
+/* .table tbody tr:hover::after{
+    background-color: #F3F3F4;
+}
+.table thead tr{
+    background-color: transparent;
+    transition: 0.4s;
+    z-index: 5;
+}
+.table thead tr:hover{
+    background-color: transparent;
+    transition: 0.4s;
+} */
+
+.td-flexy{
+    display: flex;
+}
+.td-links-box{
+    display: flex;
+    flex-direction: column;
+    max-width: 340px;
+    max-height: 25px;
+    overflow: hidden;
+    transition: 0.4s;
+}
+
+.td-links-box span{
+    margin-bottom: 20px;
+    /* display: flex;   */
+}
+.td-links-box span a{
+   margin-top: 1px;
+   margin-left: 10px;   
+} 
+.td-link{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #10AEA8;
+    font-family: 'Roboto _GEO Nus';
+}
+/* .th-title{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 28px;
+    color: #303030;
+    font-family: 'Bebas Neue';
+} */
+ /* .table tr th{
+     padding-left: 150px;
+ }
+ .table tr td{
+    padding-left: 150px;
+}
+ .table tr th:first-child{
+     padding-left: 0;
+    padding-right: 80px;
+} */
+.data-box{
+    width: 100%;
+    margin-bottom: 16px;
+}
+.data-box h2{
+    font-size: 34px;
+    line-height: 34px;
+    font-weight: 400;
+    color: #262262;
+    font-family: 'Bebas Neue';
+    margin-top: 60px;
+    margin-bottom: 70px;
+}
+.members-box{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.members{
+    width: fit-content;
+}
+.members-link{
+    padding: 13px 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #FFFFFF;
+    font-family: 'Bebas Neue';
+    background: #0F75BC;
+    transition: 0.4s;
+}
+.all-members-link{
+    padding: 13px 50px;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #303030;
+    font-family: 'Bebas Neue';
+    background: #F3F3F4;
+    margin-left: 40px;
+    transition: 0.4s;
+}
+.all-members-link:hover{
+    background: #0F75BC;
+    color: #FFFFFF;
+}
+
+
+.members-search{
+    width: 350px;
+    /* height: 15px; */
+    display: flex;
+    align-items: center;
+    margin-left: 50px;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    position: relative;
+    height: 50px;
+}
+
+.members-search:hover .inp-members{
+    border: 2px solid #0F75BC;
+}
+.inp-members:focus-visible {
+    border: 2px solid #0F75BC;
+}
+.inp-members::placeholder{
+    color: #C1C1C1;
+}
+ 
+.inp-members{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    font-weight: 500;
+    border-top-left-radius: 50px;
+    border-bottom-left-radius: 50px;
+    padding: 13px 0;
+    padding-left: 36px;
+    background: rgba(243,243,244,0.9);
+    font-family: 'ALK Rounded Nusx Med';
+    color: #3A3A3A;
+    line-height: 21px;
+    position: absolute;
+    left: 0;
+    border: 2px solid transparent;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    overflow: visible;
+    transition: 0.3s;
+}
+
+.btns2{
+    border: none;
+    padding: 8px 0;
+    padding-right: 10px;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    background: rgba(243,243,244,0.9);
+    position: absolute;
+    right: 2px;
+}
+.red-search{
+    margin-right: 16px;
+    color: #ED1C24;
+    font-size: 24px;
+}
+
+
+.table-boxes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.table-box{
+    width: 100%;
+    min-height: 106px;
+    /* background: red; */
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #F3F3F4;
+    position: relative;
+    transition: 0.4s;
+}
+.table-box::before{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background: transparent;
+    left:-100%;
+    transition: 0.4s;
+}
+.table-box::after{
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 100%;
+    background:transparent;
+    right:-100%;
+    transition: 0.4s;
+}
+.table-box:hover,
+.table-box:hover::before,
+.table-box:hover::after{
+    background: #F3F3F4;
+}
+.table-box:first-child:hover,
+.table-box:first-child:hover::before,
+.table-box:first-child:hover::after{
+    background: transparent;
+}
+.table-box:first-child{
+    border-bottom: 2px solid #262262;
+}
+.table-col{
+    width: 24%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-top: 40px;
+}
+.table-col:last-child{
+    width: 28%;
+}
+.table-h{
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #262262;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+}
+.table-h2{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    text-transform: capitalize;
+    margin-bottom: 0;
+}
+.table-col:first-child .table-h2{
+    font-size: 18px;
+    font-weight: 400;
+    color: #303030;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+}
+.table-col:last-child .table-h2{
+    width: 80%;
+    display: flex;
+    overflow: hidden;
+}
+.table-col:last-child{
+    position: relative;
+}
+.rotate{
+    position: absolute;
+    right: 5%;
+    top: 40px;
+    font-size: 18px;
+    transform: rotate(90deg);
+    padding: 5px;
+    cursor: pointer;
+    transition: 0.4s;
+}
+.table-h3{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    text-transform: capitalize;
+}
+.table-col-link{
+    font-size: 16px;
+    line-height: 28px;
+    font-weight: 400;
+    color: #10AEA8;
+    font-family: 'Roboto _GEO Nus'; 
+    margin-left: 10px;   
+}
+
+.flexy{
+    width: 85%;
+    max-height: 36px;
+    overflow-y: clip;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+    transition: 0.4s;
+   
+}
+.table-box.opened .flexy{
+    max-height: 500px;
+}
+.table-box.opened {
+    background: #F3F3F4;
+}
+.table-box.opened::before,
+.table-box.opened::after{
+    background: #F3F3F4;
+}
+.table-box.opened .rotate{
+    transform: rotate(270deg);
+}
+.hidden-box{
+    width: 90%;
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.4s;
+}
+.hidden-h{
+    font-size: 16px;
+    line-height: 17px;
+    font-weight: 700;
+    font-family: 'Bebas Neue';
+    color: #262262;
+    margin-bottom: 16px;
+}
+.hidden-span{
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    margin-left: 40px;
+}
+
+
+.table-pagination{
+    margin-top: 100px;
+    width: 100%;
+    padding: 0;
+}
+.numbered-links{
+    width: fit-content;
+    float: right;
+    display: flex;
+    align-items: center;
+}
+.numbered-links a{
+    margin: 0 13px;
+}
+.numbered-links a:last-child{
+    margin-right: 0;
+}
+.numbered-links a:nth-child(1) span{
+    font-size: 18px;
+    color: #3A3A3A;
+    transition: 0.4s;
+}
+.numbered-links a:nth-child(2){
+    color: #3A3A3A;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    font-family: 'Roboto _GEO Nus';
+}
+.numbered-links a:nth-child(3){
+    color: #3A3A3A;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    font-family: 'Roboto _GEO Nus';
+}
+.numbered-links a:nth-child(4){
+    color: #ED1C24;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    font-family: 'Roboto _GEO Nus';
+}
+.numbered-links a:nth-child(5) span{
+    font-size: 18px;
+    color: #F3F3F4;
+    transition: 0.4s;
+}
+
+
+/* 
+    events
+*/
+
+
+
+
+.events{
+    margin-bottom: 128px;
+}
+.currents-events{
+    margin-top: 54px;
+    margin-bottom: 59px;
+}
+.currents-top{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.currents-h{
+    font-weight: 400;
+    font-size: 34px;
+    line-height: 34px;
+    color: #262262;
+    font-family: 'Bebas Neue';
+}
+/* 
+    select
+*/
+.select-year{
+    width: 248px;
+    position: relative;
+}
+.select-year select{
+    width: 100%;
+    padding: 16px 19px;
+    background-color: #F3F3F4;
+    border: none;
+    appearance: none;
+    /* position: absolute; */
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #808080;
+    font-family: 'Roboto _GEO Nus';
+    text-transform: capitalize;
+    outline: none;
+}
+.select-year:focus-visible .position-arrow{
+    transform: translateY(-50%) rotate(90deg);
+}
+.position-arrow{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-90deg);
+    right: 19px;
+    height: fit-content;
+    color: #808080;
+    font-size: 20px;
+}
+/* 
+    select
+*/
+.currents-boxes{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid #F3F3F4;
+}
+.currents-box{
+    width: 100%;
+    position: relative;
+    margin-bottom: 89px;
+}
+.currents-img{
+    width: fit-content;
+    height: 280px;
+    position: relative;
+    display: block;
+    transition: 0.4s;
+}
+
+.currents-img img{
+    width: 100%;
+    height: 100%;
+}
+.date{
+    position: absolute;
+    height: 253px;
+    width: 223px;
+    right: -30%;
+    bottom: 0;
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.date::after{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    right: 0;
+    width: 2px;
+    height: 90%;
+    background: #F3F3F4;
+}
+.date-h{
+    text-align: center;
+    /* padding: 0 64px; */
+    font-size: 34px;
+    font-weight: 400;
+    color: #303030;
+    line-height: 60px;
+    font-family: 'Bebas Neue';
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.date-h-s{
+    font-size: 50px;
+}
+.currents-article{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: calc(100% - 36%);
+    padding-left: 200px;
+    border-top: 2px solid #F3F3F4;
+}
+.currents-title{
+    font-size: 34px;
+    color: #303030;
+    line-height: 40px;
+    font-weight: 400;
+    font-family: 'Bebas Neue';
+    height: 83px;
+    overflow: hidden;
+    padding-right: 170px;
+    margin-top: 60px;
+}
+.currents-links{
+    display: flex;
+    flex-direction: column;
+}
+.date-links{
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+}
+.date-links a{
+    font-size: 18px;
+    font-weight: 400;
+    color: #10AEA8;
+    line-height: 28px;
+    font-family: 'Roboto _GEO Nus';
+}
+.currents-line{
+    width: 60px;
+    height: 2px;
+    background: #10AEA8;
+    margin: 0 20px;
+}
+.currents-p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #808080;
+    font-family: 'Roboto _GEO Nus';
+    margin-top: 15px;
+    margin-bottom: 0;
+}
+.currents-see{
+    position: absolute;
+    right: 0;
+    bottom: -53px;
+    padding: 11px 32px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #303030;
+    border-radius: 50px;
+    border: 2px solid #10AEA8;
+    transition: 0.4s;
+    font-family: 'Roboto _GEO Nus';
+}
+.currents-see:hover{
+    background: #10AEA8;
+    color: #FFFFFF;
+}
+
+
+/* 
+    events detailed
+*/
+
+.welc-events-link {
+    font-size: 16px;
+    font-weight: 400;
+    color: #3A3A3A;
+    line-height: 21px;
+    font-family: 'Roboto _GEO Nus';
+    position: relative;
+    padding-bottom: 24px;
+    transition: 0.4s;
+}
+
+.welc-events-link:before{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: -13%;
+    width: 125%;
+    height: 1px;
+    background: transparent;
+    z-index: 5;
+    transition: 0.4s;
+}
+.welc-events-link:hover::before{
+    background: #10AEA8;
+}
+
+.active-border{
+    position: relative;
+}
+.active-border:before{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: -13%;
+    width: 125%;
+    height: 1px;
+    background: #10AEA8;
+    z-index: 5;
+    transition: 0.4s;
+}
+.events-detailed{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-top: 60px;
+}
+.events-det-article{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-right: 14%;
+}
+.events-det-h{
+    font-size: 34px;
+    font-weight: 400;
+    color: #262262;
+    line-height: 34px;
+    font-family: 'Bebas Neue';
+    margin-bottom: 30px;
+}
+
+.events-det-a{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #ED1C24;
+    font-family: 'Roboto _GEO Nus';
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.currents-line2{
+    width: 60px;
+    height: 2px;
+    background: #ED1C24!important;
+    margin: 0 20px
+}
+
+.events-det-p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    margin-bottom: 0;
+}
+.det-p1{
+    margin-bottom: 30px;
+    height: 52px;
+    overflow: hidden;
+}
+.det-p2{
+    margin-bottom: 40px;
+    height: 108px;
+    overflow: hidden;
+}
+.terms-link{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #0F75BC;
+    font-family: 'Bebas Neue';
+    text-decoration: underline;
+    margin-bottom: 40px;
+}
+.det-p4{
+    margin-bottom: 60px;
+}
+
+.team-boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.team-box{
+    width: calc((100% - 60px) / 3);
+    display: flex;
+    align-items: center;
+}
+.team-img{
+    position: relative;
+    height: 241px;
+}
+.team-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.team-img-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(38, 34, 98, 0.33);
+}
+
+.person{
+    padding-left: 34px;
+}
+.person h3{
+    font-size: 28px;
+    font-weight: 400;
+    color: #10AEA8;
+    line-height: 35px;
+    font-family: 'Bebas Neue';
+    margin-bottom: 20px;
+}
+.person h4{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    margin-bottom: 12px;
+}
+.person h5{
+    font-size: 16px;
+    font-weight: 400;
+    color: #808080;
+    line-height: 28px;
+    font-family: 'Roboto _GEO Nus';
+}
+
+.events-info{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 80px;
+    margin-bottom: 20px;
+}
+.info-box{
+    width: calc((100% - 72px) / 4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 140px;
+    background: rgba(243, 243, 244, 0.5);
+    transition: 0.3s;
+}
+.info-box:hover{
+    box-shadow: 0px 2px 6px 0px rgba(105,93,93,0.75);
+}
+.info-title{
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #303030;
+    font-family: 'Bebas Neue';
+    margin-left: 30px;
+    margin-bottom: 0;
+}
+
+.icon-cogs, .icon-let, .icon-home2, .phone-icon2{
+    font-size: 52px!important;
+    color: #0F75BC!important;
+}
+
+/* 
+    events - registation 
+*/
+
+.events-reg-box{
+    margin-top: 52px;
+}
+.events-reg-title{
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #262262;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    margin-bottom: 59px;
+}
+.reg-p{
+    font-size: 24px;
+    line-height: 40px;
+    font-weight: 400;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    text-transform: capitalize;
+    width: fit-content;
+    position: relative;
+    margin-bottom: 0;
+}
+.mandat-star{
+    color: #ED1C24;
+    font-size: 20px;
+    position: absolute;
+    top: -7px;
+    right: -8px;
+}
+.check-boxes{
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+}
+.checks{
+    position: relative;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #707070;
+    cursor: pointer;
+}
+.s{
+    
+    /* background: transparent; */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.25s;
+    display: none;
+}
+.check-active .s{
+    display: block;
+}
+.check-p{
+    font-size: 24px;
+    font-weight: 400;
+    color: #303030;
+    line-height: 40px;
+    font-family: 'Roboto _GEO Nus';
+    margin-left: 17px;
+    margin-bottom: 0;
+}
+.check-p::first-letter{
+    text-transform: capitalize;
+}
+.reg-refounds{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-top: 60px;
+}
+.refounds-h{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+}
+.refounds-p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #808080;
+    font-family: 'Roboto _GEO Nus';
+    margin-bottom: 0;
+}
+
+.register-form-box{
+    width: 100%;
+    margin-top: 80px;
+}
+.reg-inp-box{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 39px;
+}
+.first-inp-box,
+.last-inp-box{
+    width: calc((100% - 30px) / 2);
+}
+.reg-form-title{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    position: relative;
+    width: fit-content;
+    margin-bottom: 21px;
+}
+.reg-form-title::first-letter{
+    text-transform: capitalize;
+}
+.inp-reg-title{
+    background: #F4F4F5;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 40px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    border: none;
+    appearance: none;
+    outline: none;
+}
+::placeholder{
+    color: #303030;
+    display: none;
+}
+.inp-reg-title::first-letter{
+    text-transform: capitalize;
+}
+.reg-inp-address-box{
+    width: 100%;
+    margin-bottom: 39px;
+}
+.register-links{
+    float: right;
+    width: 225px;
+    height: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #34BAB5;
+    border-radius: 50px;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 37px;
+    font-family: 'Roboto _GEO Nus';
+    color: #FFFFFF;
+    transition: 0.3s;
+    margin-top: 60px;
+}
+
+.select-reg{
+    width: 100%;
+    height: 60px;
+    position: relative;
+}
+.select-country{
+    width: 100%;
+    height: 100%;
+    border: none;
+    outline: none;
+    background: #F4F4F5;
+    padding-left: 24px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 37px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    appearance: none;
+}
+
+
+/* 
+    gallery 
+*/
+.gallery-link {
+    font-size: 16px;
+    font-weight: 400;
+    color: #3A3A3A;
+    line-height: 21px;
+    font-family: 'Roboto _GEO Nus';
+    position: relative;
+    padding-bottom: 24px;
+    transition: 0.4s;
+}
+
+.gallery-link:before{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: -13%;
+    width: 125%;
+    height: 1px;
+    background: transparent;
+    z-index: 5;
+    transition: 0.4s;
+}
+.gallery-link:hover::before{
+    background: #10AEA8;
+}
+.gallery-link.active-border::before{
+    background: #10AEA8;
+}
+
+.gallery-h{
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #262262;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    margin-top: 60px;
+    margin-bottom: 60px;
+}
+.photo-slider{
+    width: 100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.photo-sl{
+    width: calc((100% - 60px) / 3);
+    height: 280px;
+    transition: 0.4s;
+    position: relative;
+}
+.photo-sl img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.photo-sl-bg{
+    position: absolute;
+    width: 80%;
+    height: initial;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(38, 34, 98, 0.33);
+    transition: 0.4s;
+    opacity: 0;
+}
+.photo-bg-text{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #FFFFFF;
+    font-family: 'Roboto _GEO Nus';
+    transition: 0.4s;
+    text-align: center;
+    padding:24px 0;
+    margin-bottom: 0;
+    transition: 0.3s;
+}
+.photo-sl:hover .photo-sl-bg{
+    opacity: 1;
+}
+.photo-sl:nth-child(1),
+.photo-sl:nth-child(3){
+    margin-bottom: 30px;
+}
+.photo-sl:nth-child(2){
+    margin-bottom: -30px;
+}
+.photo-sl:nth-child(5){
+    margin-bottom: -60px;
+}
+/* 
+    gallery detail
+*/
+
+.gallery-detail-section {
+    margin-bottom: 98px;
+}
+.gallery-det-link {
+    font-size: 16px;
+    font-weight: 400;
+    color: #3A3A3A;
+    line-height: 21px;
+    font-family: 'Roboto _GEO Nus';
+    position: relative;
+    padding-bottom: 24px;
+    transition: 0.4s;
+}
+
+.gallery-det-link:before{
+    position: absolute;
+    content: " ";
+    bottom: 0;
+    left: -6%;
+    width: 115%;
+    height: 1px;
+    background: transparent;
+    z-index: 5;
+    transition: 0.4s;
+}
+.gallery-det-link:hover::before{
+    background: #10AEA8;
+}
+.gallery-det-link.active-border::before{
+    background: #10AEA8;
+}
+.gallery-det-box::after{
+    width: 1058px;
+}
+
+.gallery-detail-h{
+    margin-bottom: 40px;
+    width: fit-content;
+}
+
+.gallery-det-article{
+    width: 86%;
+    height: initial;
+}
+.gallery-det-p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    width: 100%;
+    height: 108px;
+    overflow: hidden;
+    margin-bottom: 0;
+}
+.photos-box{
+    width: 100%;
+    height: initial;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 60px;
+}
+.picture{
+    width: calc((100% - 60px) / 3);
+    height: 280px;
+    margin-bottom: 30px;
+}
+.picture img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* 
+    news page
+*/
+
+.about-page-article .news-page-title{
+    margin-bottom: 30px;
+}
+.news{
+    margin-bottom: 128px;
+}
+.news-page-text{
+    width: 100%;
+}
+.news-date-sp{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #EF3B42;
+    font-family: 'Roboto _GEO Nus';
+}
+.news-text-p{
+    margin-top: 40px;
+    width: 86%;
+}
+.news-p{
+    font-size: 18px;
+    font-weight: 400;
+    font-family: 'Roboto _GEO Nus';
+    line-height: 28px;
+    color: #303030;
+    margin-bottom: 30px;
+}
+.news-p:nth-child(1){
+    height: 52px;
+    overflow: hidden;
+}
+
+.news-p:nth-child(2){
+    height: 108px;
+    overflow: hidden;
+}
+
+.news-p:nth-child(4){
+    height: 52px;
+    overflow: hidden;
+}
+
+.news-p:nth-child(5){
+    height: 108px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+.middle-h{
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #0F75BC;
+    font-family: 'Bebas Neue';
+    margin-top: 40px;
+    margin-bottom: 40px;
+    text-decoration: underline;
+}
+
+.news-photo-gallery{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: initial;
+    margin-top: 60px;
+}
+.news-pic{
+    width: calc((100% - 60px) / 3);
+    height: 280px;
+}
+.news-pic img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+
+
+/* 
+    about us 2
+
+*/
+
+.about-us-h{
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #262262;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    margin-top: 60px;
+    margin-bottom: 0;
+}
+.about-photo-box{
+    margin-bottom: 158px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+.photo-about-sl{
+    width: calc((100% - 60px) / 3);
+    height: 280px;
+}
+.photo-about-sl:nth-child(1),
+.photo-about-sl:nth-child(2),
+.photo-about-sl:nth-child(3){
+    margin-bottom: 30px;
+}
+.photo-about-sl:nth-child(2),
+.photo-about-sl:nth-child(5){
+    margin-bottom: -30px;
+}
+.photo-about-sl:nth-child(5){
+    margin-bottom: -60px;
+}
+
+
+/* 
+    news 
+*/
+
+.select-years-links{
+    display: flex;
+    align-items: center;
+}
+.years-link{
+    width: 124px;
+    height: 46px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    margin-left: 16px;
+    border-radius: 50px;
+    border: 2px solid #1C75BC;
+    transition: 0.4s;
+}
+.years-link:hover,
+.years-link.active-background-col{
+    background: #1C75BC;
+    color: #FFFFFF;
+}
+.news-article-w{
+    width: 73%;
+}
+.news-article-p{
+    height: 80px;
+    overflow: hidden;
+}
+
+.news-date-title{
+    font-size: 50px;
+    font-weight: 400;
+    line-height: 70px;
+    color: #262262;
+    font-family: 'Bebas Neue';
+    padding: 45px 50px 40px 40px;
+    text-align: center;
+}
+.news-date-month{
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 50px;
+    color: #262262;
+    font-family: 'Bebas Neue';
+}
+
+/* 
+    trainings- registration
+*/
+
+.about-organisation-title{
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 34px;
+    color: #10AEA8;
+    font-family: 'ALK Rounded Nusx Med';
+    text-transform: uppercase;
+    margin-bottom: 0;
+}
+.reg-mg-top2{
+    margin-top: 35px;
+}
+.reg-mg-bot1{
+    margin-bottom: 80px;
+}
+.about-member-info{
+    margin-bottom: 52px;
+}
+
+
+/*
+    contact us
+*/
+.contact-us-form-box{
+    display: flex;
+    justify-content: space-between;
+
+}
+.contact-us-h{
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #262262;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    margin-top: 54px;
+    margin-bottom: 57px;
+}
+
+.conatact-us-social{
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    margin-top: 24px;
+}
+.contact-us-info{
+    width: fit-content;
+}
+.us-info-box{
+    margin-bottom: 40px;
+    display: flex;
+    flex-direction: column;
+}
+.contact-us-link{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3F3E4D;
+    line-height: 21px;
+    font-family: 'Roboto _GEO Nus';
+    margin-top: 0;
+}
+.circle-soc{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #10AEA8;
+    margin-right: 13px;
+}
+.contact-soc{
+    font-size: 20px;
+    color: #10AEA8;
+}
+
+.us-info-h{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 28px;
+    color: #3F3E4D;
+    font-family: 'Roboto _GEO Nus';
+    margin-top: 20px;
+}
+
+.contact-us-form{
+    width: 43%;
+    margin-left: 80px;
+}
+.contact-us-em{
+    display: flex;
+    justify-content: space-between;
+}
+.contact-us-email{
+    margin-right: 40px;
+}
+
+.contact-us-name,
+.contact-us-textarea,
+.contact-us-email,
+.contact-us-phone{
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 27px;
+    color: #3F3E4D;
+    font-family: 'Roboto _GEO Nus';
+    border-bottom: 2px solid #F2F2F2;
+    padding-left: 3px;
+    padding-bottom: 11px;
+    transition: 0.4s;
+}
+.contact-us-textarea::placeholder,
+.contact-us-name::placeholder,
+.contact-us-email::placeholder,
+.contact-us-phone::placeholder{
+    color: #E0E0E0;
+}
+.contact-us-textarea:hover,
+.contact-us-textarea:focus-visible,
+.contact-us-name:hover,
+.contact-us-name:focus-visible,
+.contact-us-email:hover,
+.contact-us-email:focus-visible,
+.contact-us-phone:hover,
+.contact-us-phone:focus-visible{
+    border-bottom: 2px solid #34BAB5;
+}
+.contact-us-email,
+.contact-us-phone{
+    margin-top: 88px;
+}
+.contact-us-name{
+    margin-top: 10px;
+}
+.contact-us-textarea{
+    margin-top: 91px;
+}
+
+.send-link{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 224px;
+    height: 65px;
+    border-radius: 50px;
+    color: #FFFFFF;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 42px;
+    background: #10AEA8;
+    font-family: 'Roboto _GEO Nus';
+    transition: 0.4s;
+    float: right;
+    margin-top: 70px;
+}
+.send-link::first-letter{
+    text-transform: capitalize;
+}
+.send-link:hover{
+    background: #0F75BC;
+}
+
+.maps-box{
+    margin-top: 70px;
+    width: 100%;
+    height: 404px;
+    background: #FFFFFF;
+}
+.maps-box iframe{
+    width: 100%;
+    height: 100%;
+}
+.contact{
+    margin-bottom: 128px;
+}
+
+
+.icon-loca, .icon-email, 
+.icon-telephone{
+    font-size: 40px;
+    color: #10AEA8;
+}
+.icon-email{
+    font-size: 30px;
+}
+
+/* 
+    partners
+
+*/
+
+
+
+.partners-h{
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 34px;
+    color: #262262;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    margin-top: 60px;
+    margin-bottom: 52px;
+}
+
+.partners-gallery{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.partners-boxes{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 2px solid #F3F3F4;
+    border-radius: 10px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    border-bottom: 2px solid #F3F3F4;
+    
+}
+.partners-boxes:nth-child(2),
+.partners-boxes:nth-child(3){
+    border-top: none;
+    padding-top: 40px;
+}
+.partners-box{
+    width: calc((100% - 90px) / 4);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 256px;
+    padding: 0 60px;
+    transition: 0.4s;
+    position: relative;
+}
+.partners-box:before{
+    content: " ";
+    position: absolute;
+    left: -15px;
+    top: 5%;
+    width: 2px;
+    height: 90%;
+    background: #F3F3F4;
+    transition: 0.4s;
+}
+.partners-box:first-child:before{
+    width: 0;
+}
+.partners-box:hover{
+    box-shadow: 0px 4px 5px 0px rgba(112,112,112,0.87);
+}
+.partners-box img{
+    width: 100%;
+}
+.partners-box-p{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 26px;
+    color: #303030;
+    font-family: 'Roboto _GEO Nus';
+    margin-bottom: 0;
+    margin-top: 50px;
+    height: 50px;
+    overflow: hidden;
+    text-align: center;
+}
+
+
+/* 
+    seearch page
+*/
+.search{
+    width: 100%;
+    margin-top: 60px;
+}
+.search-page-title{
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 42px;
+    color: #262262;
+    text-align: center;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    margin-bottom: 37px;
+}
+.search-page-form{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 60px;
+}
+.search-inp{
+    width: 100%;
+    height: 100%;
+    outline: none;
+    border: none;
+    background: #F3F3F4;
+    font-size: 16px;
+    font-weight: 400;
+    color: #3A3A3A;
+    font-family: 'Roboto _GEO Nus';
+    line-height: 23px;
+    padding-left: 30px;
+    border-radius: 8px;
+}
+.position-search{
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    font-size: 21px;
+    color: #3A3A3A;
+}
+.search-results{
+    width: 100%;
+    max-height: 30px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    transition: 0.5s;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+.result-h{
+    font-size: 24px;
+    font-weight: 400;
+    color: #262262;
+    line-height: 34px;
+    font-family: 'Bebas Neue';
+    text-transform: uppercase;
+    /* margin-bottom: 30px; */
+    cursor: pointer;
+}
+.search-results:last-child{
+    margin-bottom: 0;
+}
+.result-p{
+    width: 90%;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 28px;
+    color: rgba(48, 48, 48, 0.8);
+    font-family: 'Roboto _GEO Nus';
+    margin-bottom: 0;
+}
+.rotate2{
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    top: -4px;
+    right: 25px;
+    transform: rotate(90deg);
+    cursor: pointer;
+    transition: 0.4s;
+    font-size: 18px;
+}
+.result-span{
+    width: 80%;
+    overflow: hidden;
+}
+.result-height{
+    max-height: 180px;
+}
+.result-height .rotate2{
+    transform: rotate(270deg);
+}
+
+
+
+
+
+/* .logo-slider .slick-slide{
+    padding-left: 0px;
+    padding-right: 35px;
+}
+.logo-slider .slick-active{
+    padding-left: 0px;
+    padding-right: 35px;
+}
+
+.logo-slider .slick-active + .slick-active{
+    padding-left: 15px;
+    padding-right: 35px;
+}
+.logo-slider .slick-active + .slick-active + .slick-active{
+    padding-right: 15px;
+    padding-left: 35px;
+}
+
+.logo-slider .slick-active + .slick-active + .slick-active + .slick-active{
+    padding-right: 0px;
+    padding-left: 35px;
+} */
+
+/* .slick-initialized .slick-slide{
+    overflow-x: hidden;
+} */
